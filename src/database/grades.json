@@ -2,22 +2,6 @@
   "nextId": 49,
   "grades": [
     {
-      "id": 1,
-      "student": "Loiane Groner",
-      "subject": "01 - JavaScript",
-      "type": "Fórum",
-      "value": 15,
-      "timestamp": "2020-05-19T18:21:24.958Z"
-    },
-    {
-      "id": 2,
-      "student": "Loiane Groner",
-      "subject": "02 - Node",
-      "type": "Fórum",
-      "value": 5,
-      "timestamp": "2020-05-19T18:21:24.964Z"
-    },
-    {
       "id": 3,
       "student": "Loiane Groner",
       "subject": "03 - React",
