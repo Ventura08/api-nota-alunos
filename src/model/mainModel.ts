@@ -31,6 +31,10 @@ export class MainModel {
         }
     }
 
+    async deleteData(grade: Grade) {
+        
+    }
+
     async getNextId() {
         return grades.nextId
     }

@@ -34,7 +34,16 @@ app.post("/create-data", async (req: Request, res: Response) => {
 app.put("/edit-data/:id", async (req: Request, res: Response) => {
     try {
       await Controller.editData(req.body, Number(req.params.id));
-      res.send(`Registro de ID ${req.params.id}: ` + JSON.stringify(req.body, null, 3))
+      res.send(`Registro de ID ${req.params.id} editado com sucesso `)
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  app.delete("/:id/delete", async (req: Request, res: Response) => {
+    try {
+      await Controller.deleteData(Number(req.params.id));
+      res.send(`Registro de ID ${req.params.id} deletado com sucesso`)
     } catch (error) {
       console.log(error);
     }

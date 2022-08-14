@@ -30,6 +30,13 @@ export class MainController {
     const valildator = await DB.editData(grade)
   }
 
+  async deleteData(id: number) {
+    const grades = await currentData;
+    const arrayGrades: Array<GradesData> = Array.from(grades.grades);
+    const nonDeletedData = this.deleteFilter(id, arrayGrades);
+    console.log(nonDeletedData);
+}
+
   async changeData(
     arrayGrades: Array<GradesData>,
     data: GradesData,
@@ -43,4 +50,13 @@ export class MainController {
       return item;
     });
   }
+
+  async deleteFilter(
+    id: number,
+    arrayGrades: Array<GradesData>,
+  ) {
+    return arrayGrades.map((item) => item.id != id)
+  }
+
+
 }
